@@ -7,9 +7,9 @@ import TestAnimation from "./utils/GSAP_animation/TestAnimation";
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
-      <Temple_Model />
+      {/* <Temple_Model /> */}
       <TestAnimation />
     </>
   );
