@@ -1,15 +1,18 @@
 import React from "react";
-import Navbar from "./component/Navbar";
+
 import Hero from "./component/Hero";
-import Temple_Model from "./component/Temple_Model";
+
 import TestAnimation from "./utils/GSAP_animation/TestAnimation";
+
+import Info from "./component/Info";
+import RoundM from "./component/RoundM";
 
 const App = () => {
   return (
     <>
-      {/* <Navbar /> */}
       <Hero />
-      {/* <Temple_Model /> */}
+      {/* <Info /> */}
+      <RoundM />
       <TestAnimation />
     </>
   );

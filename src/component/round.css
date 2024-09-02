@@ -1,0 +1,52 @@
+/* #container {
+  padding: 100px;
+  } */
+  .rotator{
+    width: 420px;
+    height: 420px;
+    display: block;
+    list-style:none;
+    position:relative;
+    /* background: transparent url(http://perpetualmediagroup.ca/DFS/HTML/ValuePropositon/images/bg-dots.png) center center no-repeat; */
+    background-size: 395px 395px;
+    margin: 0px;
+  }
+  .rotator li{position:absolute;top:0;margin:auto;}
+  .rotator li {
+    width:94px;
+    height:94px;
+    display:block;
+    text-align:center;
+    line-height:94px;
+  
+  }
+  .rotator span{display:none}
+  li.m1{top:-35px;left:0;right:0;
+    background: transparent url(http://perpetualmediagroup.ca/DFS/HTML/ValuePropositon/images/Computer-blue.png) center center no-repeat;
+    background-size: 94px 94px;
+  }
+  li.m2{top:15%;right:12px;
+    background: transparent url(http://perpetualmediagroup.ca/DFS/HTML/ValuePropositon/images/Ribbon-blue.png) center center no-repeat;
+    background-size: 94px 94px;
+  }
+  li.m3{top:62.5%;right:15px;
+    background: transparent url(http://perpetualmediagroup.ca/DFS/HTML/ValuePropositon/images/Piggy-bank-blue.png) center center no-repeat;
+    background-size: 94px 94px;
+  }
+  li.m4{top:auto;bottom:-30px;left:0;right:0;
+    background: transparent url(http://perpetualmediagroup.ca/DFS/HTML/ValuePropositon/images/Rocket-blue.png) center center no-repeat;
+    background-size: 94px 94px;
+  }
+  li.m5{top:62.5%;left:15px;
+    background: transparent url(http://perpetualmediagroup.ca/DFS/HTML/ValuePropositon/images/Umbrella-blue.png) center center no-repeat;
+    background-size: 94px 94px;
+  }
+  li.m6{top:15%;left:15px;
+    background: transparent url(http://perpetualmediagroup.ca/DFS/HTML/ValuePropositon/images/Bar-graph-blue.png) center center no-repeat;
+    background-size: 94px 94px;
+  }
+  
+  button {
+    padding: 10px;
+    cursor: pointer;
+  }
