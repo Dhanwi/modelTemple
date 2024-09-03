@@ -10,7 +10,7 @@ export const cardContents = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
     LearnMore: "Learn More",
     url: "/",
-    src: { PinkCloud },
+    src: PinkCloud,
     alt: "imgPic",
     // className: ''
     url: "https://tailwindcss.com/docs/background-image",
@@ -21,7 +21,7 @@ export const cardContents = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
     LearnMore: "Learn More",
     url: "/",
-    src: { PinkCloud },
+    src: PinkCloud ,
     alt: "imgPic",
     // className: ''
     url: "https://tailwindcss.com/docs/background-image",
@@ -32,7 +32,7 @@ export const cardContents = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
     LearnMore: "Learn More",
     url: "/",
-    src: { PinkCloud },
+    src: PinkCloud ,
     alt: "imgPic",
     // className: ''
     url: "https://tailwindcss.com/docs/background-image",
@@ -43,7 +43,7 @@ export const cardContents = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
     LearnMore: "Learn More",
     url: "/",
-    src: { PinkCloud },
+    src: PinkCloud ,
     alt: "imgPic",
     // className: ''
     url: "https://tailwindcss.com/docs/background-image",
@@ -54,7 +54,7 @@ export const cardContents = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
     LearnMore: "Learn More",
     url: "/",
-    src: { PinkCloud },
+    src: PinkCloud ,
     alt: "imgPic",
     // className: ''
     url: "https://tailwindcss.com/docs/background-image",
@@ -65,7 +65,7 @@ export const cardContents = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
     LearnMore: "Learn More",
     url: "/",
-    src: { PinkCloud },
+    src: PinkCloud,
     alt: "imgPic",
     // className: ''
     url: "https://tailwindcss.com/docs/background-image",
