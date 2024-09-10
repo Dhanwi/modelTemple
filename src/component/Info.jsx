@@ -29,7 +29,7 @@ const Info = ({ title, description, LearnMore, src, alt, url, isVisible }) => {
   return (
     <div
       ref={infoRef}
-      className='bg-transparent border-t-2 border-b-4 border-b-pink-700 h-[50vh] w-[40vh] hover:border-t-4 hover:border-b-8 hover:border-t-light-pink hover:border-b-light-pink hover:border-s-dark-Pink rounded-tl-3xl rounded-br-3xl shadow-dark-Pink shadow-2xl hover:shadow-2xl hover:shadow-light-pink'
+      className='bg-dark-Pink hover:bg-light-pink opacity-5 border-t-2 border-b-4 border-white h-[50vh] w-[40vh] hover:border-t-4 hover:border-b-8 hover:border-s-dark-Pink rounded-tl-3xl rounded-br-3xl shadow-black shadow-2xl hover:shadow-2xl hover:shadow-white'
     >
       <div className='flex flex-col justify-center items-center'>
         <div className='text-white text-lg font-black mt-6 mb-5'>
@@ -39,7 +39,7 @@ const Info = ({ title, description, LearnMore, src, alt, url, isVisible }) => {
           <img src={src} alt={alt} className='w-full h-full object-cover' />
         </div>
 
-        <div className='flex items-center text-center mt-2 text-sm font-bold px-3 text-balance text-dark-Pink'>
+        <div className='flex items-center text-center mt-2 text-sm font-bold px-3 text-balance text-white hover:text-dark-Pink'>
           <p>{description}</p>
         </div>
         {/* Updated the onClick handler to open the URL */}

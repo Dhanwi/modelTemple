@@ -6,6 +6,7 @@ import TestAnimation from "./utils/GSAP_animation/TestAnimation";
 
 import Info from "./component/Info";
 import RoundM from "./component/RoundM";
+import Section3 from "./component/Section3";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Hero />
       <Info />
       <RoundM />
+      <Section3 />
       <TestAnimation />
     </>
   );

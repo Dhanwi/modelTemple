@@ -5,6 +5,7 @@ import "./round.css";
 import { roundMenu } from "../utils/tailwindStyles/roundMenu";
 import Info from "./Info";
 import { cardContents } from "../constants";
+import Section3 from "./Section3";
 
 const RoundM = () => {
   const [visibleCardIndex, setVisibleCardIndex] = useState(null); // State to track the active card index
@@ -23,8 +24,8 @@ const RoundM = () => {
     const moveDistance = 200; // Adjust distance for left movement
 
     // Set initial transform origin for rotation
-    gsap.set(rotatorRef.current, { transformOrigin: "center center" });
-    gsap.set(listItemsRef.current, { transformOrigin: "center center" });
+    // gsap.set(rotatorRef.current, { transformOrigin: "center center" });
+    // gsap.set(listItemsRef.current, { transformOrigin: "center center" });
 
     // Create the rotation animation timeline
     const rotationTimeline = gsap.timeline({
@@ -36,9 +37,9 @@ const RoundM = () => {
       .to(".circleMid", {
         rotation: "+=360",
         scale: 3,
-        duration: 10,
+        duration: 5,
         opacity: 0,
-        ease: "sine.in",
+        ease: "none",
       })
       .from([rotatorRef.current, ...listItemsRef.current], {
         opacity: 0,
@@ -61,26 +62,6 @@ const RoundM = () => {
         },
         0
       ); // Start both animations at the same time
-
-    const handleCardAnimation = () => {
-      gsap.to(rotatorRef.current, {
-        x: `-=${moveDistance}`, // Move left
-        scale: 0.5, // Decrease size
-        duration: 0.6,
-        ease: "power2.out",
-      });
-      // gsap.fromTo(
-      //   ".info-card",
-      //   {
-      //     x: "100vw", // Start from the right
-      //   },
-      //   {
-      //     x: "0",
-      //     duration: 0.6,
-      //     ease: "power2.out",
-      //   }
-      // );
-    };
 
     // Use ScrollTrigger to start the animation when the rotator section comes into view
     ScrollTrigger.create({
@@ -119,6 +100,7 @@ const RoundM = () => {
     // handleCardAnimation();
     gsap.to(rotatorRef.current, {
       x: -500, // Move the rotator to the left
+      y: 200,
       scale: 0.6, // Decrease size
       duration: 0.5,
       ease: "power1.inOut",
@@ -132,44 +114,49 @@ const RoundM = () => {
   };
 
   return (
-    <div className='h-[120vh] flex bg-gradient-to-t from-light-creamy-pink via-light-pink to-dark-Pink items-center justify-center relative'>
-      {/* Removed buttons for clarity */}
+    // bg-gradient-to-t from-light-creamy-pink via-light-pink to-dark-Pink
+    <div className='h-[120vh] flex flex-col items-center justify-center relative'>
+      <div
+        className='h-[100vh] w-[215vh] border-white border-l-2 border-r-2 rounded-3xl flex flex-col items-center justify-center '
+        style={{ backgroundColor: "rgba(150, 1, 40, 70%)" }}
+      >
+        {/* Center Circle */}
+        <div className='circleMid bg-transparent rounded-full border-white shadow-black shadow-2xl hover:shadow-light-creamy-pink border-t-2 border-b-4 h-[10vh] w-[10vh] absolute z-10'></div>
 
-      {/* Center Circle */}
-      <div className='circleMid bg-transparent rounded-full border-black border-t-2 border-b-4 h-[10vh] w-[10vh] absolute z-10'></div>
-
-      {/* Rotating Circle Container */}
-      <div className='relative'>
-        <ul
-          ref={rotatorRef}
-          className='rotator h-[60vh] w-[60vh] border-white border-t-4 rounded-full border-b-4 text-transparent flex items-center justify-center relative'
-        >
-          {/* List Items */}
-          {cardContents.map((content, index) => (
-            <li
-              key={index}
-              className={`${roundMenu.list} ${content.className}`} // Use dynamic class names
-              onClick={() => handleClick(index)} // Handle click to show the corresponding card
-              ref={el => (listItemsRef.current[index] = el)} // Assign ref to each list item
-            >
-              <a href='#'>
-                <span>{index + 1}</span> {/* Display item number or custom text */}
-              </a>
-            </li>
-          ))}
-        </ul>
-        {visibleCardIndex !== null && (
-          <Info
-            className='info-card'
-            title={cardContents[visibleCardIndex].title}
-            description={cardContents[visibleCardIndex].description}
-            LearnMore={cardContents[visibleCardIndex].LearnMore}
-            src={cardContents[visibleCardIndex].src}
-            alt={cardContents[visibleCardIndex].alt}
-            url={cardContents[visibleCardIndex].url}
-            isVisible={true} // Always true since this component only renders if a card is selected
-          />
-        )}
+        {/* Rotating Circle Container */}
+        <div className='relative'>
+          <ul
+            ref={rotatorRef}
+            className='rotator h-[60vh] w-[60vh] border-white shadow-2xl shadow-black hover:shadow-white border-t-4 rounded-full border-b-4 text-transparent flex items-center justify-center relative'
+          >
+            {/* List Items */}
+            {cardContents.map((content, index) => (
+              <li
+                key={index}
+                className={`${roundMenu.list} ${content.className}`} // Use dynamic class names
+                onClick={() => handleClick(index)} // Handle click to show the corresponding card
+                ref={el => (listItemsRef.current[index] = el)} // Assign ref to each list item
+              >
+                <a href='#'>
+                  <span>{index + 1}</span> {/* Display item number or custom text */}
+                </a>
+              </li>
+            ))}
+          </ul>
+          {visibleCardIndex !== null && (
+            <Info
+              className='info-card'
+              title={cardContents[visibleCardIndex].title}
+              description={cardContents[visibleCardIndex].description}
+              LearnMore={cardContents[visibleCardIndex].LearnMore}
+              src={cardContents[visibleCardIndex].src}
+              alt={cardContents[visibleCardIndex].alt}
+              url={cardContents[visibleCardIndex].url}
+              isVisible={true} // Always true since this component only renders if a card is selected
+            />
+          )}
+        </div>
+        <Section3 className='mt-10 relative ' />
       </div>
     </div>
   );
